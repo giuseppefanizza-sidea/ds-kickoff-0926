@@ -1,0 +1,1260 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Kickoff Digital Startup Giokids</title>
+<style>
+  :root { color-scheme: light; }
+  html, body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<style>
+  :root {
+    --navy: #1D3557;
+    --navy-deep: #142743;
+    --coral: #E63946;
+    --coral-dark: #C1121F;
+    --teal: #457B9D;
+    --teal-dark: #35617C;
+    --sand: #F4A261;
+    --mint: #F1FAEE;
+    --white: #FFFFFF;
+    --n-100: #F7F9FA;
+    --n-200: #E4EBEF;
+    --n-300: #CFDAE1;
+    --n-600: #667C89;
+    --n-800: #2E4150;
+    --green: #2D6A4F;
+    --green-soft: #D7EBE0;
+    --amber-soft: #FCEFD8;
+    --coral-soft: #FADCDE;
+    --teal-soft: #DCE9F0;
+    --chart-b: #1A759F;
+    --c-ink: #2E4150;
+    --c-muted: #667C89;
+    --c-grid: #D3E0E4;
+    --font: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    --mono: "Consolas", "SF Mono", "Menlo", monospace;
+    --radius: 12px;
+    --shadow: 0 4px 24px rgba(29, 53, 87, 0.09);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--font);
+    background: var(--navy);
+    color: var(--navy);
+    overflow: hidden;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .slide {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 56px 76px;
+    position: relative;
+    text-align: center;
+  }
+  .slide.active { display: flex; }
+
+  .bg-dark { background: var(--navy); color: var(--white); }
+  .bg-deep { background: linear-gradient(140deg, var(--navy) 0%, var(--navy-deep) 100%); color: var(--white); }
+  .bg-light { background: var(--mint); color: var(--navy); }
+  .bg-white { background: var(--white); color: var(--navy); }
+  .bg-coral { background: var(--coral); color: var(--white); }
+  .bg-teal { background: var(--teal); color: var(--white); }
+  .bg-warm { background: linear-gradient(140deg, var(--coral) 0%, var(--sand) 100%); color: var(--white); }
+
+  h1 { font-size: 3.4rem; font-weight: 800; line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 20px; text-wrap: balance; }
+  h2 { font-size: 2.2rem; font-weight: 700; line-height: 1.18; letter-spacing: -0.015em; margin-bottom: 22px; text-wrap: balance; }
+  h3 { font-size: 1.35rem; font-weight: 700; line-height: 1.3; margin-bottom: 10px; }
+  p, li { font-size: 1.18rem; line-height: 1.6; }
+
+  .eyebrow {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    opacity: 0.62;
+    margin-bottom: 14px;
+  }
+  .subtitle { font-size: 1.35rem; line-height: 1.5; opacity: 0.88; font-weight: 400; }
+  .meta {
+    font-family: var(--mono);
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    opacity: 0.7;
+    margin-top: 36px;
+  }
+  .lead { font-size: 1.5rem; line-height: 1.5; font-weight: 400; max-width: 900px; }
+  .kicker { font-size: 1.05rem; opacity: 0.75; margin-top: 22px; }
+
+  .content { max-width: 1140px; width: 100%; }
+  .content.narrow { max-width: 880px; }
+  .left { text-align: left; }
+
+  .cols-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; text-align: left; }
+  .cols-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; }
+
+  .card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 28px 26px;
+    box-shadow: var(--shadow);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card-ghost {
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius);
+    padding: 26px 24px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card p, .card li, .card-ghost p, .card-ghost li { font-size: 1.05rem; }
+  .card .num {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+    color: var(--coral);
+  }
+  .card-ghost .num { color: var(--sand); }
+
+  /* rule-led lists, not everything is a card */
+  .stack { display: flex; flex-direction: column; gap: 0; text-align: left; }
+  .stack .row {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 26px;
+    padding: 16px 0;
+    border-top: 1px solid var(--n-200);
+    align-items: baseline;
+  }
+  .stack .row:last-child { border-bottom: 1px solid var(--n-200); }
+  .stack .row .k { font-weight: 700; font-size: 1.05rem; }
+  .stack .row .v { font-size: 1.05rem; }
+  .bg-dark .stack .row, .bg-deep .stack .row, .bg-teal .stack .row { border-color: rgba(255,255,255,0.16); }
+  .bg-dark .stack .row:last-child, .bg-deep .stack .row:last-child, .bg-teal .stack .row:last-child { border-bottom-color: rgba(255,255,255,0.16); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 1.02rem; text-align: left; }
+  th {
+    background: var(--navy);
+    color: var(--white);
+    padding: 11px 14px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  td { padding: 11px 14px; border-bottom: 1px solid var(--n-200); vertical-align: top; }
+  tr:nth-child(even) td { background: var(--n-100); }
+  .t-wrap { overflow-x: auto; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  .bg-dark th, .bg-deep th, .bg-teal th, .bg-coral th { background: rgba(255,255,255,0.16); color: var(--white); }
+  .bg-dark td, .bg-deep td, .bg-teal td, .bg-coral td { border-bottom: 1px solid rgba(255,255,255,0.14); }
+  .bg-dark tr:nth-child(even) td, .bg-deep tr:nth-child(even) td,
+  .bg-teal tr:nth-child(even) td, .bg-coral tr:nth-child(even) td { background: rgba(255,255,255,0.06); }
+
+  ul, ol { text-align: left; padding-left: 1.35em; }
+  li { margin-bottom: 9px; }
+  ul.plain { list-style: none; padding-left: 0; }
+  ul.plain li { padding-left: 30px; position: relative; }
+  ul.yes li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 800; }
+  ul.them li::before { content: "✓"; position: absolute; left: 0; color: var(--chart-b); font-weight: 800; }
+  ul.ask li::before { content: "→"; position: absolute; left: 0; color: var(--sand); font-weight: 800; }
+
+  .badge {
+    display: inline-block;
+    padding: 4px 11px;
+    border-radius: 20px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .b-red { background: var(--coral-soft); color: var(--coral-dark); }
+  .b-amber { background: var(--amber-soft); color: #8A5A16; }
+  .b-green { background: var(--green-soft); color: var(--green); }
+  .b-teal { background: var(--teal-soft); color: var(--teal-dark); }
+
+  .note {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 22px;
+    font-size: 1rem;
+    text-align: left;
+    border-left: 4px solid var(--teal);
+    background: var(--teal-soft);
+    color: var(--n-800);
+  }
+  .note.warn { border-left-color: var(--sand); background: var(--amber-soft); }
+  .note.stop { border-left-color: var(--coral); background: var(--coral-soft); }
+  .note strong { font-weight: 700; }
+
+  .divider-num {
+    font-family: var(--mono);
+    font-size: 9rem;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.13;
+    position: absolute;
+    top: 44px;
+    right: 68px;
+  }
+
+  /* countdown rail */
+  .rail { display: flex; width: 100%; margin: 34px 0 10px; }
+  .stop { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .stop .date { font-family: var(--mono); font-size: 0.92rem; font-weight: 700; letter-spacing: 0.03em; opacity: 0.8; }
+  .stop .dotrow { position: relative; width: 100%; height: 22px; display: flex; align-items: center; justify-content: center; }
+  .stop .dotrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(255,255,255,0.28);
+  }
+  .stop:first-child .dotrow::before { left: 50%; }
+  .stop:last-child .dotrow::before { right: 50%; }
+  .stop .dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--white);
+    position: relative; z-index: 1;
+  }
+  .stop.peak .dot { width: 26px; height: 26px; background: var(--coral); box-shadow: 0 0 0 7px rgba(230, 57, 70, 0.24); }
+  .stop .label { font-size: 0.96rem; font-weight: 700; line-height: 1.3; max-width: 150px; }
+  .stop .sub { font-size: 0.84rem; opacity: 0.66; line-height: 1.3; max-width: 150px; }
+
+  /* grafico: palette validata #E63946 + #1A759F su fondo menta */
+  .content.wide { max-width: 1240px; }
+  .chart { width: 100%; margin-top: 6px; }
+  .c-legend { display: flex; justify-content: flex-start; margin-bottom: 4px; }
+  .c-key { display: flex; align-items: center; gap: 9px; font-size: 0.92rem; color: var(--c-muted); font-weight: 600; }
+  .c-swatch { width: 20px; height: 3px; border-radius: 2px; background: var(--coral); flex: none; }
+  .c-plot { position: relative; width: 100%; }
+  .c-plot svg { width: 100%; height: auto; display: block; overflow: visible; }
+  .c-grid { stroke: var(--c-grid); stroke-width: 1; }
+  .c-axis { stroke: var(--c-muted); stroke-width: 1; }
+  .c-tick { fill: var(--c-muted); font-size: 13px; font-family: var(--mono); }
+  .c-unit { fill: var(--c-muted); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; }
+  .c-line { fill: none; stroke: var(--coral); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .c-dot { fill: var(--coral); stroke: var(--mint); stroke-width: 2; }
+  .c-point { fill: var(--c-ink); font-size: 13.5px; font-weight: 700; }
+  .c-break { stroke: var(--c-ink); stroke-width: 1.5; stroke-dasharray: 5 4; opacity: 0.55; }
+  .c-breaklab { fill: var(--c-ink); font-size: 12.5px; font-weight: 700; letter-spacing: 0.04em; }
+  .c-mean { stroke: var(--chart-b); stroke-width: 2; stroke-dasharray: 2 5; stroke-linecap: round; }
+  .c-meanlab { fill: var(--chart-b); font-size: 13px; font-weight: 700; }
+  .c-meanlab, .c-point, .c-breaklab, .c-tick {
+    paint-order: stroke;
+    stroke: var(--mint);
+    stroke-width: 5px;
+    stroke-linejoin: round;
+  }
+  .c-hits rect { fill: transparent; }
+  .c-cross { stroke: var(--c-ink); stroke-width: 1; opacity: 0; }
+  .c-hover { fill: var(--coral); stroke: var(--mint); stroke-width: 2.5; }
+  .c-tip {
+    position: absolute;
+    transform: translate(-50%, -140%);
+    background: var(--navy);
+    color: var(--white);
+    padding: 6px 11px;
+    border-radius: 6px;
+    font-size: 0.86rem;
+    font-family: var(--mono);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .statline { display: flex; gap: 44px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
+  .statline .item { display: flex; flex-direction: column; gap: 2px; align-items: center; }
+  .statline .fig { font-size: 2.5rem; font-weight: 800; line-height: 1; letter-spacing: -0.02em; }
+  .statline .cap { font-size: 0.84rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.68; }
+
+  .progress { position: fixed; top: 0; left: 0; height: 4px; background: var(--coral); transition: width 0.28s ease; z-index: 1000; }
+  .counter { position: fixed; bottom: 20px; right: 28px; font-family: var(--mono); font-size: 0.8rem; opacity: 0.45; color: inherit; z-index: 100; }
+  .brandmark { position: fixed; bottom: 20px; left: 28px; font-size: 0.76rem; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.4; color: inherit; z-index: 100; }
+
+  @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+  .slide.active .content { animation: rise 0.42s ease-out; }
+  @media (prefers-reduced-motion: reduce) {
+    .slide.active .content { animation: none; }
+    .progress { transition: none; }
+  }
+
+  @media (max-width: 1024px) {
+    .slide { padding: 40px 40px; }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.75rem; }
+    .lead { font-size: 1.25rem; }
+    .cols-3 { gap: 16px; }
+    .divider-num { font-size: 6rem; top: 22px; right: 32px; }
+    .stop .label { font-size: 0.85rem; }
+  }
+
+  @media (max-width: 768px) {
+    body { overflow-y: auto; overflow-x: hidden; }
+    .slide { height: auto; min-height: 100vh; padding: 34px 20px; align-items: flex-start; }
+    h1 { font-size: 1.85rem; }
+    h2 { font-size: 1.45rem; }
+    h3 { font-size: 1.1rem; }
+    p, li { font-size: 1rem; }
+    .subtitle, .lead { font-size: 1.08rem; }
+    .cols-2, .cols-3 { grid-template-columns: 1fr; gap: 18px; }
+    .card, .card-ghost { padding: 18px; }
+    .stack .row { grid-template-columns: 1fr; gap: 4px; }
+    table { font-size: 0.86rem; }
+    th, td { padding: 8px 10px; }
+    .c-tick, .c-point, .c-meanlab, .c-breaklab { font-size: 17px; }
+    .c-legend { font-size: 0.8rem; }
+    .rail { flex-direction: column; gap: 18px; }
+    .stop { flex-direction: row; align-items: center; gap: 14px; }
+    .stop .dotrow { width: 22px; height: 22px; }
+    .stop .dotrow::before { display: none; }
+    .stop .label, .stop .sub { max-width: none; text-align: left; }
+    .divider-num { display: none; }
+    .statline { gap: 24px; }
+    .statline .fig { font-size: 1.7rem; }
+  }
+</style>
+
+<div class="progress" id="progressBar"></div>
+<div class="brandmark">Sidea Group</div>
+<div class="counter" id="slideCounter"></div>
+
+<!-- 1 · cover -->
+<div class="slide active bg-deep">
+  <div class="content">
+    <p class="eyebrow">Sidea Group · Temporary Digital Manager</p>
+    <h1>Digital Startup<br>Villa Bebè Giokids</h1>
+    <p class="subtitle">Insediamento del tavolo di lavoro per il lancio<br>dell'e-commerce omnicanale e la stagione Q4</p>
+    <p class="meta">Mercoledì 9 settembre 2026 · 90 minuti · Direzione, Marketing, IT, Sidea</p>
+  </div>
+</div>
+
+<!-- 2 · agenda -->
+<div class="slide bg-white">
+  <div class="content">
+    <p class="eyebrow">Come useremo i 90 minuti</p>
+    <h2>Agenda</h2>
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th class="num">Min</th><th>Blocco</th><th>Cosa portiamo a casa</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="num">10</td><td>Come lavoriamo insieme</td><td>Chiarezza su chi porta cosa al tavolo</td></tr>
+          <tr><td class="num">15</td><td><strong>Il punto di partenza reale</strong></td><td>Cinque anni di vendite del vecchio sito, e una domanda aperta</td></tr>
+          <tr><td class="num">15</td><td>North Star e calendario</td><td>Il Black Friday come vera scadenza, conferma del Go-Live</td></tr>
+          <tr><td class="num">20</td><td>Insediamento del tavolo</td><td>Ruoli nominati, cadenze fissate, calendario approvato</td></tr>
+          <tr><td class="num">20</td><td>Cosa ci serve da voi</td><td>Owner e data per ogni materiale, 5 decisioni indirizzate</td></tr>
+          <tr><td class="num">10</td><td>Verbale e prossimi passi</td><td>Verbale condiviso, agenda delle prime tre settimane</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- 3 · i tre output -->
+<div class="slide bg-coral">
+  <div class="content">
+    <p class="eyebrow">Obiettivo dell'incontro</p>
+    <h2>Da qui dobbiamo uscire con tre sì</h2>
+    <div class="cols-3">
+      <div class="card-ghost">
+        <span class="num">SÌ 01</span>
+        <h3>Data di Go-Live confermata</h3>
+        <p>Martedì 3 novembre, per iscritto. È la riga da cui dipende ogni altra data del programma.</p>
+      </div>
+      <div class="card-ghost">
+        <span class="num">SÌ 02</span>
+        <h3>Black Friday come North Star</h3>
+        <p>Il 27 novembre è la scadenza vera. Il Go-Live è la pre-condizione, non il traguardo.</p>
+      </div>
+      <div class="card-ghost">
+        <span class="num">SÌ 03</span>
+        <h3>Tavolo insediato</h3>
+        <p>Un nome per ogni ruolo, una cadenza per ogni incontro, un owner per ogni materiale.</p>
+      </div>
+    </div>
+    <p class="kicker">Senza questi tre punti il calendario delle 12 settimane non può partire.</p>
+  </div>
+</div>
+
+<!-- 4 · divider 01 -->
+<div class="slide bg-dark">
+  <span class="divider-num">01</span>
+  <div class="content narrow">
+    <p class="eyebrow">Blocco uno</p>
+    <h1>Come lavoriamo<br>insieme</h1>
+    <p class="subtitle">Cosa stiamo lanciando, e come ci dividiamo il lavoro</p>
+  </div>
+</div>
+
+<!-- 5 · da dove partiamo -->
+<div class="slide bg-white">
+  <div class="content">
+    <p class="eyebrow">Il punto di partenza</p>
+    <h2>Da un e-commerce a un ecosistema omnicanale</h2>
+    <div class="cols-2">
+      <div class="card">
+        <span class="num">OGGI</span>
+        <h3>PrestaShop su villabebegiokids.it</h3>
+        <p>Catalogo, clienti e ordini storici vivono qui. Le Fidelity vivono su Toshiba, le email su 4DEM, il resto nei negozi.</p>
+      </div>
+      <div class="card">
+        <span class="num">DAL 3 NOVEMBRE</span>
+        <h3>Shopify più MyArea</h3>
+        <p>Un solo profilo cliente per online e negozio, Liste Nascita digitali, volantino digitale, Fidelity nel Golden Record.</p>
+      </div>
+    </div>
+    <div class="statline">
+      <div class="item"><span class="fig">126.969</span><span class="cap">clienti storici</span></div>
+      <div class="item"><span class="fig">52.152</span><span class="cap">ordini</span></div>
+      <div class="item"><span class="fig">25.572</span><span class="cap">prodotti</span></div>
+      <div class="item"><span class="fig">~60.000</span><span class="cap">fidelity analogiche</span></div>
+      <div class="item"><span class="fig">20</span><span class="cap">punti vendita</span></div>
+    </div>
+    <div class="note">
+      <span>Volumi rilevati dal dump del database PrestaShop, 51 tabelle indicizzate. Due cifre non sono verificabili da lì: le Fidelity sono la stima del programma omnicanale, da confermare con l'export Toshiba, e il numero di punti vendita va confermato da Operations.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 6 · come lavoriamo insieme -->
+<div class="slide bg-light">
+  <div class="content narrow">
+    <p class="eyebrow">Come lavoriamo insieme</p>
+    <h2>Affianchiamo il vostro team, non lo sostituiamo</h2>
+    <p class="lead">Per 12 settimane Sidea siede al vostro tavolo come Temporary Digital Manager, e porta metodo, brief e lettura dei dati. Le mani sulle campagne, sui contenuti e sui materiali restano le vostre: è così che l'autonomia si costruisce davvero.</p>
+    <div class="note">
+      <span><strong>Dove vogliamo arrivare.</strong> A gennaio il vostro team gestisce la piattaforma da solo, con i playbook in mano e le routine settimanali già rodate. Ogni scelta di questi mesi è pensata per quel momento.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 7 · dentro / fuori -->
+<div class="slide bg-white">
+  <div class="content">
+    <p class="eyebrow">Divisione del lavoro</p>
+    <h2>Chi porta cosa al tavolo</h2>
+    <div class="cols-2">
+      <div class="card">
+        <span class="num">SIDEA PORTA</span>
+        <ul class="plain yes">
+          <li>Strategia media Q4 e tassonomia campagne</li>
+          <li>Brief creativi, POP, nurturing, campagne</li>
+          <li>Segmentazione del database Fidelity</li>
+          <li>Disegno dei flussi di automation</li>
+          <li>Posizionamento e keyword map Liste Nascita</li>
+          <li>Lettura dati, report settimanali, coaching</li>
+          <li>Formazione: formativo MyArea, playbook BFCM, SOP</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="num">GIOCHI3 E IL BUILD TEAM PORTANO</span>
+        <ul class="plain them">
+          <li>Setup tracking GA4, GTM e pixel, dalla build</li>
+          <li>Landing Liste Nascita, dalla build</li>
+          <li>Creatività: visual, video, copy esecutivo</li>
+          <li>Prezzi e definizione delle promozioni</li>
+          <li>Esecuzione delle campagne e degli invii CRM</li>
+          <li>Estrazione Fidelity da Toshiba, export già abilitato</li>
+          <li>Stampa e distribuzione dei materiali nei 20 negozi</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note">
+      <span><strong>Nessuna delle due colonne resta sola.</strong> Anche le voci di destra hanno owner e data nel nostro calendario: le presidiamo insieme a voi, così nessuna arriva scoperta al Go-Live.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 8 · i tre pilastri -->
+<div class="slide bg-teal">
+  <div class="content">
+    <p class="eyebrow">Su cosa lavoriamo</p>
+    <h2>Tre pilastri, tre risultati misurabili</h2>
+    <div class="cols-3">
+      <div class="card-ghost">
+        <span class="num">PILASTRO 1</span>
+        <h3>Media Strategy &amp; Activation</h3>
+        <p>Massimizzare il fatturato Q4 su Google Ads, Meta e TradeTracker, con Natale e stagione del giocattolo nello stesso trimestre.</p>
+        <p><span class="badge b-teal">ROAS blended > 5x</span></p>
+      </div>
+      <div class="card-ghost">
+        <span class="num">PILASTRO 2</span>
+        <h3>Adoption MyArea</h3>
+        <p>Convertire circa 60.000 Fidelity registrate col solo telefono in profili digitali con email valida e consenso.</p>
+        <p><span class="badge b-teal">Email valide: +15pp</span></p>
+      </div>
+      <div class="card-ghost">
+        <span class="num">PILASTRO 3</span>
+        <h3>Lead Gen Liste Nascita</h3>
+        <p>Usare il lancio delle Liste Nascita per acquisire il target Mamma in attesa, il segmento a più alto valore nel tempo.</p>
+        <p><span class="badge b-teal">CPL ≤ 18 €</span></p>
+      </div>
+    </div>
+    <p class="kicker">I tre pilastri non sono progetti separati: la Fidelity digitalizzata alimenta le audience media, e le Liste Nascita generano i profili che il CRM lavora nei due anni successivi.</p>
+  </div>
+</div>
+
+<!-- 9 · divider 02 · punto di partenza reale -->
+<div class="slide bg-dark">
+  <span class="divider-num">02</span>
+  <div class="content narrow">
+    <p class="eyebrow">Blocco due</p>
+    <h1>Il punto di<br>partenza reale</h1>
+    <p class="subtitle">Cosa dicono cinque anni di dati del vecchio e-commerce</p>
+  </div>
+</div>
+
+<!-- 10 · cosa ha venduto il sito -->
+<div class="slide bg-white">
+  <div class="content">
+    <p class="eyebrow">Giugno 2021 · giugno 2026</p>
+    <h2>Cinque anni di vendite, letti dal database</h2>
+    <div class="statline" style="margin-top:0;margin-bottom:26px">
+      <div class="item"><span class="fig">€ 1,98 mln</span><span class="cap">fatturato storico</span></div>
+      <div class="item"><span class="fig">45%</span><span class="cap">dal sito diretto</span></div>
+      <div class="item"><span class="fig">€ 38,93</span><span class="cap">scontrino medio</span></div>
+      <div class="item"><span class="fig">3,9%</span><span class="cap">clienti con più di un ordine</span></div>
+    </div>
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th>Canale</th><th class="num">Fatturato</th><th class="num">Scontrino medio</th><th>Che cliente porta</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Sito diretto</strong></td><td class="num">€ 886.014</td><td class="num">€ 58 · 75</td><td>Il cliente che il brand vede, può profilare e fidelizzare</td></tr>
+          <tr><td><strong>Amazon e marketplace</strong></td><td class="num">~ € 1,1 mln</td><td class="num">€ 28,80</td><td>Volume, ma cliente anonimo e scontrino dimezzato</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <span>Il 55% del fatturato passa da un canale dove il brand non vede il cliente, e dove lo scontrino vale la metà. Il 96% di chi compra non torna mai. È esattamente il contesto in cui nascono MyArea e le Liste Nascita.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 11 · il crollo -->
+<div class="slide bg-light">
+  <div class="content wide">
+    <p class="eyebrow">Il dato che cambia la lettura del Q4</p>
+    <h2>A febbraio 2024 il sito diretto ha perso due terzi del fatturato, e non è più risalito</h2>
+    <div class="chart">
+      <div class="c-legend"><span class="c-key"><span class="c-swatch"></span><span>Fatturato mensile sito diretto, esclusa Amazon</span></span></div>
+      <div class="c-plot" id="cPlot">
+        <svg viewBox="0 0 1060 356" role="img" aria-label="Fatturato mensile del sito diretto da giugno 2021 a giugno 2026, con crollo strutturale da febbraio 2024">
+        <title>Fatturato mensile sito diretto, giugno 2021 · giugno 2026</title>
+        <line class="c-grid" x1="78" y1="300.0" x2="1006" y2="300.0"/>
+        <text class="c-tick" x="66" y="304.0" text-anchor="end">0</text>
+        <line class="c-grid" x1="78" y1="236.8" x2="1006" y2="236.8"/>
+        <text class="c-tick" x="66" y="240.8" text-anchor="end">15.000</text>
+        <line class="c-grid" x1="78" y1="173.5" x2="1006" y2="173.5"/>
+        <text class="c-tick" x="66" y="177.5" text-anchor="end">30.000</text>
+        <line class="c-grid" x1="78" y1="110.3" x2="1006" y2="110.3"/>
+        <text class="c-tick" x="66" y="114.3" text-anchor="end">45.000</text>
+        <line class="c-grid" x1="78" y1="47.1" x2="1006" y2="47.1"/>
+        <text class="c-tick" x="66" y="51.1" text-anchor="end">60.000</text>
+        <text class="c-unit" x="66" y="18" text-anchor="end">€ / mese</text>
+        <text class="c-tick" x="78.0" y="322" text-anchor="middle">giu 2021</text>
+        <text class="c-tick" x="186.3" y="322" text-anchor="middle">2022</text>
+        <text class="c-tick" x="371.9" y="322" text-anchor="middle">2023</text>
+        <text class="c-tick" x="557.5" y="322" text-anchor="middle">2024</text>
+        <text class="c-tick" x="743.1" y="322" text-anchor="middle">2025</text>
+        <text class="c-tick" x="928.7" y="322" text-anchor="middle">2026</text>
+        <line class="c-break" x1="572.9" y1="24" x2="572.9" y2="300"/>
+        <text class="c-breaklab" x="564.9" y="36" text-anchor="end">febbraio 2024</text>
+        <line class="c-mean" x1="78" y1="211.8" x2="572.9" y2="211.8"/>
+        <text class="c-meanlab" x="84" y="202.8">media 32 mesi · € 20.930 al mese</text>
+        <line class="c-mean" x1="572.9" y1="268.6" x2="1006" y2="268.6"/>
+        <text class="c-meanlab" x="1006" y="290.6" text-anchor="end">media 29 mesi · € 7.455 al mese</text>
+        <polyline class="c-line" points="78.0,274.9 93.5,218.6 108.9,262.2 124.4,250.9 139.9,210.1 155.3,196.4 170.8,45.5 186.3,183.9 201.7,206.0 217.2,190.3 232.7,225.8 248.1,224.6 263.6,229.3 279.1,242.9 294.5,233.1 310.0,241.3 325.5,218.7 340.9,170.7 356.4,119.0 371.9,165.5 387.3,242.6 402.8,235.0 418.3,219.4 433.7,232.7 449.2,253.5 464.7,215.9 480.1,235.8 495.6,239.5 511.1,250.8 526.5,235.9 542.0,118.4 557.5,187.5 572.9,268.3 588.4,261.1 603.9,261.6 619.3,223.1 634.8,267.5 650.3,265.9 665.7,271.5 681.2,271.6 696.7,273.3 712.1,273.2 727.6,226.4 743.1,263.0 758.5,272.4 774.0,272.0 789.5,274.3 804.9,274.2 820.4,276.5 835.9,275.7 851.3,276.2 866.8,282.4 882.3,280.4 897.7,268.4 913.2,241.1 928.7,278.2 944.1,282.6 959.6,278.2 975.1,250.3 990.5,283.5 1006.0,295.7"/>
+        <circle class="c-dot" cx="542.0" cy="118.4" r="5"/>
+        <text class="c-point" x="542.0" y="104.4" text-anchor="middle">dic 2023 · € 43.070</text>
+        <circle class="c-dot" cx="913.2" cy="241.1" r="5"/>
+        <text class="c-point" x="927.2" y="227.1" text-anchor="end">dic 2025 · € 13.964</text>
+        <g class="c-hits">
+        <rect x="70.3" y="26" width="15.5" height="274" data-lab="giu 2021 · € 5.956" data-x="78.0" data-y="274.9"/>
+        <rect x="85.7" y="26" width="15.5" height="274" data-lab="lug 2021 · € 19.306" data-x="93.5" data-y="218.6"/>
+        <rect x="101.2" y="26" width="15.5" height="274" data-lab="ago 2021 · € 8.963" data-x="108.9" data-y="262.2"/>
+        <rect x="116.7" y="26" width="15.5" height="274" data-lab="set 2021 · € 11.649" data-x="124.4" data-y="250.9"/>
+        <rect x="132.1" y="26" width="15.5" height="274" data-lab="ott 2021 · € 21.324" data-x="139.9" data-y="210.1"/>
+        <rect x="147.6" y="26" width="15.5" height="274" data-lab="nov 2021 · € 24.577" data-x="155.3" data-y="196.4"/>
+        <rect x="163.1" y="26" width="15.5" height="274" data-lab="dic 2021 · € 60.382" data-x="170.8" data-y="45.5"/>
+        <rect x="178.5" y="26" width="15.5" height="274" data-lab="gen 2022 · € 27.548" data-x="186.3" data-y="183.9"/>
+        <rect x="194.0" y="26" width="15.5" height="274" data-lab="feb 2022 · € 22.309" data-x="201.7" data-y="206.0"/>
+        <rect x="209.5" y="26" width="15.5" height="274" data-lab="mar 2022 · € 26.024" data-x="217.2" data-y="190.3"/>
+        <rect x="224.9" y="26" width="15.5" height="274" data-lab="apr 2022 · € 17.594" data-x="232.7" data-y="225.8"/>
+        <rect x="240.4" y="26" width="15.5" height="274" data-lab="mag 2022 · € 17.895" data-x="248.1" data-y="224.6"/>
+        <rect x="255.9" y="26" width="15.5" height="274" data-lab="giu 2022 · € 16.772" data-x="263.6" data-y="229.3"/>
+        <rect x="271.3" y="26" width="15.5" height="274" data-lab="lug 2022 · € 13.556" data-x="279.1" data-y="242.9"/>
+        <rect x="286.8" y="26" width="15.5" height="274" data-lab="ago 2022 · € 15.874" data-x="294.5" data-y="233.1"/>
+        <rect x="302.3" y="26" width="15.5" height="274" data-lab="set 2022 · € 13.914" data-x="310.0" data-y="241.3"/>
+        <rect x="317.7" y="26" width="15.5" height="274" data-lab="ott 2022 · € 19.289" data-x="325.5" data-y="218.7"/>
+        <rect x="333.2" y="26" width="15.5" height="274" data-lab="nov 2022 · € 30.669" data-x="340.9" data-y="170.7"/>
+        <rect x="348.7" y="26" width="15.5" height="274" data-lab="dic 2022 · € 42.946" data-x="356.4" data-y="119.0"/>
+        <rect x="364.1" y="26" width="15.5" height="274" data-lab="gen 2023 · € 31.912" data-x="371.9" data-y="165.5"/>
+        <rect x="379.6" y="26" width="15.5" height="274" data-lab="feb 2023 · € 13.614" data-x="387.3" data-y="242.6"/>
+        <rect x="395.1" y="26" width="15.5" height="274" data-lab="mar 2023 · € 15.408" data-x="402.8" data-y="235.0"/>
+        <rect x="410.5" y="26" width="15.5" height="274" data-lab="apr 2023 · € 19.124" data-x="418.3" data-y="219.4"/>
+        <rect x="426.0" y="26" width="15.5" height="274" data-lab="mag 2023 · € 15.965" data-x="433.7" data-y="232.7"/>
+        <rect x="441.5" y="26" width="15.5" height="274" data-lab="giu 2023 · € 11.025" data-x="449.2" data-y="253.5"/>
+        <rect x="456.9" y="26" width="15.5" height="274" data-lab="lug 2023 · € 19.953" data-x="464.7" data-y="215.9"/>
+        <rect x="472.4" y="26" width="15.5" height="274" data-lab="ago 2023 · € 15.228" data-x="480.1" data-y="235.8"/>
+        <rect x="487.9" y="26" width="15.5" height="274" data-lab="set 2023 · € 14.342" data-x="495.6" data-y="239.5"/>
+        <rect x="503.3" y="26" width="15.5" height="274" data-lab="ott 2023 · € 11.671" data-x="511.1" data-y="250.8"/>
+        <rect x="518.8" y="26" width="15.5" height="274" data-lab="nov 2023 · € 15.215" data-x="526.5" data-y="235.9"/>
+        <rect x="534.3" y="26" width="15.5" height="274" data-lab="dic 2023 · € 43.070" data-x="542.0" data-y="118.4"/>
+        <rect x="549.7" y="26" width="15.5" height="274" data-lab="gen 2024 · € 26.684" data-x="557.5" data-y="187.5"/>
+        <rect x="565.2" y="26" width="15.5" height="274" data-lab="feb 2024 · € 7.522" data-x="572.9" data-y="268.3"/>
+        <rect x="580.7" y="26" width="15.5" height="274" data-lab="mar 2024 · € 9.229" data-x="588.4" data-y="261.1"/>
+        <rect x="596.1" y="26" width="15.5" height="274" data-lab="apr 2024 · € 9.108" data-x="603.9" data-y="261.6"/>
+        <rect x="611.6" y="26" width="15.5" height="274" data-lab="mag 2024 · € 18.245" data-x="619.3" data-y="223.1"/>
+        <rect x="627.1" y="26" width="15.5" height="274" data-lab="giu 2024 · € 7.715" data-x="634.8" data-y="267.5"/>
+        <rect x="642.5" y="26" width="15.5" height="274" data-lab="lug 2024 · € 8.098" data-x="650.3" data-y="265.9"/>
+        <rect x="658.0" y="26" width="15.5" height="274" data-lab="ago 2024 · € 6.761" data-x="665.7" data-y="271.5"/>
+        <rect x="673.5" y="26" width="15.5" height="274" data-lab="set 2024 · € 6.740" data-x="681.2" data-y="271.6"/>
+        <rect x="688.9" y="26" width="15.5" height="274" data-lab="ott 2024 · € 6.344" data-x="696.7" data-y="273.3"/>
+        <rect x="704.4" y="26" width="15.5" height="274" data-lab="nov 2024 · € 6.348" data-x="712.1" data-y="273.2"/>
+        <rect x="719.9" y="26" width="15.5" height="274" data-lab="dic 2024 · € 17.468" data-x="727.6" data-y="226.4"/>
+        <rect x="735.3" y="26" width="15.5" height="274" data-lab="gen 2025 · € 8.783" data-x="743.1" data-y="263.0"/>
+        <rect x="750.8" y="26" width="15.5" height="274" data-lab="feb 2025 · € 6.537" data-x="758.5" data-y="272.4"/>
+        <rect x="766.3" y="26" width="15.5" height="274" data-lab="mar 2025 · € 6.632" data-x="774.0" data-y="272.0"/>
+        <rect x="781.7" y="26" width="15.5" height="274" data-lab="apr 2025 · € 6.088" data-x="789.5" data-y="274.3"/>
+        <rect x="797.2" y="26" width="15.5" height="274" data-lab="mag 2025 · € 6.119" data-x="804.9" data-y="274.2"/>
+        <rect x="812.7" y="26" width="15.5" height="274" data-lab="giu 2025 · € 5.575" data-x="820.4" data-y="276.5"/>
+        <rect x="828.1" y="26" width="15.5" height="274" data-lab="lug 2025 · € 5.758" data-x="835.9" data-y="275.7"/>
+        <rect x="843.6" y="26" width="15.5" height="274" data-lab="ago 2025 · € 5.652" data-x="851.3" data-y="276.2"/>
+        <rect x="859.1" y="26" width="15.5" height="274" data-lab="set 2025 · € 4.166" data-x="866.8" data-y="282.4"/>
+        <rect x="874.5" y="26" width="15.5" height="274" data-lab="ott 2025 · € 4.653" data-x="882.3" data-y="280.4"/>
+        <rect x="890.0" y="26" width="15.5" height="274" data-lab="nov 2025 · € 7.502" data-x="897.7" data-y="268.4"/>
+        <rect x="905.5" y="26" width="15.5" height="274" data-lab="dic 2025 · € 13.964" data-x="913.2" data-y="241.1"/>
+        <rect x="920.9" y="26" width="15.5" height="274" data-lab="gen 2026 · € 5.166" data-x="928.7" data-y="278.2"/>
+        <rect x="936.4" y="26" width="15.5" height="274" data-lab="feb 2026 · € 4.134" data-x="944.1" data-y="282.6"/>
+        <rect x="951.9" y="26" width="15.5" height="274" data-lab="mar 2026 · € 5.173" data-x="959.6" data-y="278.2"/>
+        <rect x="967.3" y="26" width="15.5" height="274" data-lab="apr 2026 · € 11.779" data-x="975.1" data-y="250.3"/>
+        <rect x="982.8" y="26" width="15.5" height="274" data-lab="mag 2026 · € 3.903" data-x="990.5" data-y="283.5"/>
+        <rect x="998.3" y="26" width="15.5" height="274" data-lab="giu 2026 · € 1.031" data-x="1006.0" data-y="295.7"/>
+        </g>
+        <line class="c-cross" id="cCross" x1="0" y1="26" x2="0" y2="300" opacity="0"/>
+        <circle class="c-hover" id="cHov" r="6" opacity="0"/>
+        <line class="c-axis" x1="78" y1="300" x2="1006" y2="300"/>
+        </svg>
+        <div class="c-tip" id="cTip" hidden></div>
+      </div>
+    </div>
+    <div class="statline" style="margin-top:16px">
+      <div class="item"><span class="fig" style="color:var(--coral)">-64,4%</span><span class="cap">sito diretto, media mensile</span></div>
+      <div class="item"><span class="fig" style="color:var(--chart-b)">-19,4%</span><span class="cap">amazon, stesso periodo</span></div>
+      <div class="item"><span class="fig">-68%</span><span class="cap">picco di dicembre, 2023 → 2025</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 12 · lettura del crollo -->
+<div class="slide bg-white">
+  <div class="content narrow">
+    <p class="eyebrow">Come leggere quel grafico</p>
+    <h2>Non è stagionalità, ed è successo solo al sito</h2>
+    <div class="stack">
+      <div class="row"><span class="k">La rottura è netta</span><span class="v">Gennaio 2024 chiude a € 26.684. Da febbraio la media mensile si assesta tra € 4.000 e € 9.000 e resta lì per 29 mesi consecutivi.</span></div>
+      <div class="row"><span class="k">Amazon non l'ha subita</span><span class="v">Nello stesso confronto Amazon passa da € 19.780 a € 15.938 al mese, meno 19,4%. Se fosse un problema di mercato o di domanda, si vedrebbe su entrambi i canali.</span></div>
+      <div class="row"><span class="k">Il Natale si è dimezzato due volte</span><span class="v">Dicembre sul sito: € 43.070 nel 2023, € 17.467 nel 2024, € 13.963 nel 2025. Su Amazon dicembre resta tra € 59.000 e € 96.000.</span></div>
+      <div class="row"><span class="k">Perché riguarda questo programma</span><span class="v">Il Q4 2026 si gioca sul canale che ha il problema. Ottimizzare la spesa media su un sito con una causa non isolata a monte significa comprare traffico per un funnel rotto.</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 13 · mix prodotto -->
+<div class="slide bg-white">
+  <div class="content">
+    <p class="eyebrow">Una seconda sorpresa nei dati</p>
+    <h2>Il sito non vende giocattoli, vende prima infanzia</h2>
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th>Macro categoria</th><th class="num">Quota sul sito diretto</th><th class="num">Quota su Amazon</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Infanzia e Premaman</strong>, pannolini e latte</td><td class="num">62,9%</td><td class="num">3,0%</td></tr>
+          <tr><td><strong>Giocattoli</strong></td><td class="num">15,5%</td><td class="num">70,3%</td></tr>
+          <tr><td>Prodotto rimosso dal catalogo</td><td class="num">17,9%</td><td class="num">22,7%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cols-2" style="margin-top:22px">
+      <div class="card">
+        <span class="num">MARCHE PRINCIPALI</span>
+        <p>Pampers € 149.638 · Huggies € 80.873 · Moltex € 53.991 · Mellin € 53.963 · Barbie € 40.275. I primi quattro sono consumo ricorrente per neonati, non gioco.</p>
+      </div>
+      <div class="card">
+        <span class="num">COSA CAMBIA NEI BRIEF</span>
+        <p>Il brief creativo del 5 ottobre e il media plan del 2 ottobre non possono assumere un mix giocattolo sul sito. La leva Liste Nascita è invece perfettamente allineata a ciò che il sito già vende.</p>
+      </div>
+    </div>
+    <div class="note warn">
+      <span><strong>Avvertenza sul dato.</strong> Quasi un quinto del fatturato è associato a prodotti poi rimossi dal catalogo, quindi le quote vanno lette come ordini di grandezza. La direzione del dato però è troppo netta per essere un artefatto.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 14 · quattro ipotesi -->
+<div class="slide bg-white">
+  <div class="content">
+    <p class="eyebrow">La domanda che portiamo al tavolo</p>
+    <h2>Cosa è cambiato a febbraio 2024</h2>
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th>Ipotesi</th><th>Come si verifica</th><th>Owner</th><th>Entro</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Taglio o stop della spesa Ads</strong></td><td>Export Google e Meta su 2023 e 2024, confronto mese per mese</td><td>Marketing</td><td>18 set</td></tr>
+          <tr><td><strong>Perdita di posizionamento o problema tecnico</strong></td><td>Search Console storica, log di migrazioni e downtime</td><td>IT con Sidea</td><td>18 set</td></tr>
+          <tr><td><strong>Cambio del gateway di pagamento</strong></td><td>Nei dati ps_checkout sparisce dopo il 2023, sostituito da PayPal e MultiSafepay. Va verificato se la transizione ha introdotto frizione o fermi</td><td>IT</td><td>22 set</td></tr>
+          <tr><td><strong>Spostamento di priorità verso Amazon</strong></td><td>Conferma diretta della Direzione, nessun dato da estrarre</td><td>Direzione</td><td>oggi</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note stop">
+      <span><strong>Non chiediamo una risposta oggi, tranne sull'ultima riga.</strong> Chiediamo un owner per ciascuna ipotesi e la risposta entro il 22 settembre, prima che il media plan del 2 ottobre fissi il budget su un canale la cui causa di calo non è ancora isolata.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 15 · divider 03 · north star -->
+<div class="slide bg-dark">
+  <span class="divider-num">03</span>
+  <div class="content narrow">
+    <p class="eyebrow">Blocco tre</p>
+    <h1>La North Star<br>e il calendario</h1>
+    <p class="subtitle">Perché il piano è costruito a ritroso</p>
+  </div>
+</div>
+
+<!-- 10 · il go-live non è la scadenza -->
+<div class="slide bg-warm">
+  <div class="content narrow">
+    <p class="eyebrow">La scelta di pianificazione</p>
+    <h1>Il Go-Live non è la scadenza.<br>Il Black Friday lo è.</h1>
+    <p class="lead">Il 3 novembre serve ad arrivare al 27 novembre con campagne già rodate, flussi testati e audience calde. Tre settimane di rodaggio non sono un margine di sicurezza: sono la condizione per spendere bene il budget nel picco.</p>
+    <div class="statline">
+      <div class="item"><span class="fig">3 nov</span><span class="cap">go-live</span></div>
+      <div class="item"><span class="fig">3 sett.</span><span class="cap">di rodaggio e dato</span></div>
+      <div class="item"><span class="fig">27 nov</span><span class="cap">black friday</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- 11 · timeline -->
+<div class="slide bg-deep">
+  <div class="content">
+    <p class="eyebrow">12 settimane, lette a ritroso dal picco</p>
+    <h2>Le milestone non negoziabili</h2>
+    <div class="rail">
+      <div class="stop">
+        <span class="date">9 set</span>
+        <span class="dotrow"><span class="dot"></span></span>
+        <span class="label">Presentazione</span>
+        <span class="sub">Tavolo insediato, materiali richiesti</span>
+      </div>
+      <div class="stop">
+        <span class="date">14 set</span>
+        <span class="dotrow"><span class="dot"></span></span>
+        <span class="label">Avvio lavori</span>
+        <span class="sub">Raccolta dati e baseline</span>
+      </div>
+      <div class="stop">
+        <span class="date">27 ott</span>
+        <span class="dotrow"><span class="dot"></span></span>
+        <span class="label">Playbook BFCM</span>
+        <span class="sub">Consegnato e spiegato al team</span>
+      </div>
+      <div class="stop">
+        <span class="date">3 nov</span>
+        <span class="dotrow"><span class="dot"></span></span>
+        <span class="label">Go-Live</span>
+        <span class="sub">Campagne live, flussi attivi, POP in store</span>
+      </div>
+      <div class="stop peak">
+        <span class="date">27 nov</span>
+        <span class="dotrow"><span class="dot"></span></span>
+        <span class="label">Black Friday</span>
+        <span class="sub">Il picco su cui è tarato tutto il piano</span>
+      </div>
+      <div class="stop">
+        <span class="date">8 gen</span>
+        <span class="dotrow"><span class="dot"></span></span>
+        <span class="label">QBR e handover</span>
+        <span class="sub">Roadmap Q1 2027 firmata</span>
+      </div>
+    </div>
+    <div class="note warn">
+      <span><strong>Il vincolo da tenere a mente.</strong> Il 30 ottobre c'è un Go/No-Go formale. Se il tracking o la landing Liste Nascita non sono pronti, si rinvia con un piano, non si lancia sperando.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 12 · le 5 fasi -->
+<div class="slide bg-white">
+  <div class="content">
+    <p class="eyebrow">Struttura del programma</p>
+    <h2>Sette fasi, 50 incontri</h2>
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th>Fase</th><th>Periodo</th><th>Cosa succede</th><th>Consegna che chiude la fase</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>0 · Presentazione</strong></td><td>9 · 11 settembre</td><td>Insediamento del tavolo, richieste inoltrate</td><td>Verbale di kickoff</td></tr>
+          <tr><td><strong>1 · Raccolta e strategia</strong></td><td>14 set · 2 ottobre</td><td>Baseline, decisioni strategiche, audit, cluster, SEO</td><td>Media plan Q4 approvato</td></tr>
+          <tr><td><strong>2 · Brief e design</strong></td><td>5 · 16 ottobre</td><td>Brief creativo, POP, nurturing, campagne, flussi</td><td>Tutti i brief consegnati</td></tr>
+          <tr><td><strong>3 · Formazione e test</strong></td><td>19 · 30 ottobre</td><td>Formativo MyArea, setup campagne, test in produzione</td><td>Playbook BFCM e Go/No-Go</td></tr>
+          <tr><td><strong>4 · Warm-up</strong></td><td>3 · 20 novembre</td><td>Lancio, presidio quotidiano, ottimizzazione, teaser</td><td>Briefing operativo BFCM</td></tr>
+          <tr><td><strong>5 · Picco BFCM</strong></td><td>23 nov · 1 dicembre</td><td>Budget al picco, Black Friday, Cyber Monday</td><td>Debrief BFCM</td></tr>
+          <tr><td><strong>6 · Natale e chiusura</strong></td><td>4 dic · 8 gennaio</td><td>Push Natale, cohort analysis, trasferimento know-how</td><td>SOP, playbook 2027, QBR</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <span>Giornate di lavoro Sidea: lunedì, martedì, venerdì. Le eccezioni sono tre e sono dichiarate: la presentazione di oggi, mercoledì, il presidio della settimana di lancio, il presidio del weekend BFCM.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 12bis · vantaggio avvio anticipato -->
+<div class="slide bg-light">
+  <div class="content">
+    <p class="eyebrow">Perché partire adesso e non a ottobre</p>
+    <h2>Le quattro settimane che guadagniamo</h2>
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th>Punto del piano</th><th>Con avvio a ottobre</th><th>Con avvio il 14 settembre</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Baseline dati</strong></td><td>Dovuta nella stessa settimana dell'audit</td><td>Tre settimane di margine prima della delivery</td></tr>
+          <tr><td><strong>SEO Liste Nascita</strong></td><td>Brief a metà ottobre, contenuti fuori tempo per Natale</td><td>Brief il 29 settembre, i sei articoli pillar hanno tempo di indicizzarsi</td></tr>
+          <tr><td><strong>Materiali POP</strong></td><td>Decisione e stampa nella stessa finestra</td><td>Decisione il 22 settembre, oltre un mese per i 20 negozi</td></tr>
+          <tr><td><strong>Cadenza</strong></td><td>Circa 3 ore a settimana per Giochi3</td><td>Circa 2,3 ore a settimana, stessi deliverable</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <span>Il volume di lavoro non cambia, cambia la distribuzione. Il guadagno vero è sulla riga della baseline: senza numeri di partenza nessun target è credibile, e finora la baseline arrivava troppo tardi per servire.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 13 · KPI -->
+<div class="slide bg-light">
+  <div class="content">
+    <p class="eyebrow">Come misuriamo</p>
+    <h2>North Star e KPI di pilastro</h2>
+    <p class="lead" style="margin-bottom:24px">North Star: fatturato e-commerce Q4, e numero di Fidelity con email valida. Il primo è il risultato del trimestre, il secondo è l'asset che resta negli anni.</p>
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th>Pilastro</th><th>KPI</th><th>Target</th><th>Baseline</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Media</td><td>ROAS blended</td><td><span class="badge b-green">&gt; 5x</span></td><td>da fissare</td></tr>
+          <tr><td>Media</td><td>Quota nuovi clienti</td><td><span class="badge b-green">≥ 60%</span></td><td>da definire, vedi nota</td></tr>
+          <tr><td>MyArea</td><td>Fidelity con email valida</td><td><span class="badge b-green">baseline +15pp</span></td><td>da fissare</td></tr>
+          <tr><td>Liste Nascita</td><td>Liste con Consegna Garantita</td><td><span class="badge b-green">≥ 25%</span></td><td>da fissare</td></tr>
+          <tr><td>Liste Nascita</td><td>Costo per lead</td><td><span class="badge b-green">≤ 18 €</span></td><td>da fissare</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note stop">
+      <span><strong>Regola che applichiamo su ogni numero.</strong> Nessun valore di partenza viene stimato. Se un dato non arriva dalle fonti, nei documenti si legge "dato mancante" e il target resta aperto. I target si chiudono venerdì 2 ottobre, insieme al media plan, sulla baseline reale.</span>
+    </div>
+    <div class="note warn">
+      <span><strong>Un KPI da ridefinire prima di fissarlo.</strong> Nel database storico il 94-96% degli ordini di ogni Q4 è il primo ordine assoluto di quel cliente, quindi la soglia "≥ 60% nuovi clienti" risulterebbe già superata. Va chiarito con Marketing se il KPI si misura sull'attribuzione delle piattaforme Ads o sul database: sono due numeri diversi e portano a due strategie opposte.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 14 · divider 03 -->
+<div class="slide bg-dark">
+  <span class="divider-num">04</span>
+  <div class="content narrow">
+    <p class="eyebrow">Blocco quattro</p>
+    <h1>Il tavolo di lavoro</h1>
+    <p class="subtitle">Chi siede, chi decide, con quale cadenza</p>
+  </div>
+</div>
+
+<!-- 15 · chi siede al tavolo -->
+<div class="slide bg-white">
+  <div class="content">
+    <p class="eyebrow">Composizione del tavolo</p>
+    <h2>Sei ruoli, e un nome per ciascuno</h2>
+    <div class="stack">
+      <div class="row"><span class="k">Direzione</span><span class="v">Approva budget Q4 e incentivi, presiede lo Steering mensile, firma la roadmap Q1 2027.</span></div>
+      <div class="row"><span class="k">Marketing Manager</span><span class="v">Interlocutore principale del tavolo. Esegue campagne e invii, riceve brief e coaching, è il destinatario del trasferimento di know-how.</span></div>
+      <div class="row"><span class="k">Category Manager</span><span class="v">Entra nelle performance review: assortimento, prezzi, promozioni, letture per categoria.</span></div>
+      <div class="row"><span class="k">IT</span><span class="v">Baseline dati e supporto tecnico. Owner dell'export Toshiba e della build dei flussi su Shopify Flow e n8n.</span></div>
+      <div class="row"><span class="k">Operations</span><span class="v">POP nei 20 punti vendita, calendario di booking Liste Nascita, referenti per negozio.</span></div>
+      <div class="row"><span class="k">Sidea</span><span class="v">Strategia, brief, formazione, coaching, lettura dei dati. Facilita il tavolo e presidia le dipendenze.</span></div>
+    </div>
+    <div class="note warn">
+      <span><strong>Da compilare oggi.</strong> Per ogni riga serve un nome e un sostituto. Un ruolo senza nome è una dipendenza che si scopre aperta a novembre.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 16 · chi decide cosa -->
+<div class="slide bg-light">
+  <div class="content">
+    <p class="eyebrow">Divisione delle responsabilità</p>
+    <h2>Chi fa cosa, per non scoprirlo in corsa</h2>
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th>Attività</th><th>Decide</th><th>Esegue</th><th>Supporta</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Strategia media e tassonomia</td><td>Marketing</td><td>Sidea</td><td>Category</td></tr>
+          <tr><td>Budget e split per canale</td><td>Direzione</td><td>Marketing</td><td>Sidea</td></tr>
+          <tr><td>Setup e gestione campagne</td><td>Marketing</td><td>Marketing</td><td>Sidea</td></tr>
+          <tr><td>Creatività e materiali POP</td><td>Marketing</td><td>Giochi3 e fornitori</td><td>Sidea, brief</td></tr>
+          <tr><td>Segmentazione Fidelity</td><td>Sidea, metodo</td><td>IT, estrazione</td><td>Marketing</td></tr>
+          <tr><td>Flussi automation</td><td>Marketing</td><td>IT</td><td>Sidea, disegno</td></tr>
+          <tr><td>Tracking e landing</td><td>Build team</td><td>Build team</td><td>Sidea, verifica</td></tr>
+          <tr><td>Booking Liste Nascita nei PdV</td><td>Operations</td><td>Operations</td><td>Sidea</td></tr>
+          <tr><td>Go/No-Go del 31 ottobre</td><td>Direzione</td><td>Tutti</td><td>Sidea, istruttoria</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- 17 · cadenze -->
+<div class="slide bg-white">
+  <div class="content">
+    <p class="eyebrow">Ritmo di lavoro</p>
+    <h2>Le cadenze fisse del tavolo</h2>
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th>Cadenza</th><th>Formato</th><th>Chi partecipa</th><th>Quando</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Daily check</strong></td><td>Asincrono, 15 min</td><td>Sidea, Marketing</td><td>Prime due settimane dal lancio, e weekend BFCM</td></tr>
+          <tr><td><strong>Weekly status call</strong></td><td>45 min con report</td><td>Sidea, Marketing Manager</td><td>Ogni venerdì dal 6 novembre</td></tr>
+          <tr><td><strong>Performance review</strong></td><td>Bi-settimanale</td><td>Più Category Manager</td><td>Nei punti di scelta su assortimento e scaling</td></tr>
+          <tr><td><strong>Steering Committee</strong></td><td>60 min</td><td>Più Direzione</td><td>4 dicembre e 18 dicembre</td></tr>
+          <tr><td><strong>QBR e handover</strong></td><td>180 min</td><td>Tutto il tavolo</td><td>8 gennaio 2027</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <span>Un principio che chiediamo di adottare: le decisioni si prendono negli incontri in calendario. Se una decisione slitta, slitta un deliverable, e il calendario mostra quale.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 18 · impegno -->
+<div class="slide bg-teal">
+  <div class="content">
+    <p class="eyebrow">Quanto vi chiediamo in termini di tempo</p>
+    <h2>Circa due ore e mezza a settimana</h2>
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th>Sett.</th><th>Date</th><th>Focus</th><th class="num">Ore Giochi3</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>0</td><td>9 · 11 settembre</td><td>Presentazione e invio richieste</td><td class="num">2,00</td></tr>
+          <tr><td>1</td><td>14 · 15 · 18 settembre</td><td>Raccolta dati IT, Marketing, Operations</td><td class="num">2,75</td></tr>
+          <tr><td>2</td><td>21 · 22 · 25 settembre</td><td>Decisioni strategiche e primo audit</td><td class="num">3,00</td></tr>
+          <tr><td>3</td><td>28 · 29 set · 2 ottobre</td><td>Delivery cluster, SEO, media plan</td><td class="num">2,75</td></tr>
+          <tr><td>4</td><td>5 · 6 · 9 ottobre</td><td>Brief creativo, integrazione WhatsApp, brief POP</td><td class="num">3,25</td></tr>
+          <tr><td>5</td><td>12 · 13 · 16 ottobre</td><td>Brief campagne, flussi, recensioni</td><td class="num">3,00</td></tr>
+          <tr><td>6</td><td>19 · 20 · 23 ottobre</td><td>Formativo MyArea, setup, check build</td><td class="num">2,50</td></tr>
+          <tr><td>7</td><td>26 · 27 · 30 ottobre</td><td>Test in produzione, Playbook BFCM, Go/No-Go</td><td class="num">4,50</td></tr>
+          <tr><td>8 → 17</td><td>3 novembre · 8 gennaio</td><td>Lancio, BFCM, Natale, QBR e handover</td><td class="num">15,25</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="kicker">Il programma vale circa 39 ore di incontri su 50 appuntamenti. Oltre il 60% del vostro impegno cade prima del Go-Live: è lì che si decide il Q4. Il picco è la settimana dei test, non quella del Black Friday.</p>
+  </div>
+</div>
+
+<!-- 19 · divider 04 -->
+<div class="slide bg-dark">
+  <span class="divider-num">05</span>
+  <div class="content narrow">
+    <p class="eyebrow">Blocco cinque</p>
+    <h1>Cosa ci serve da voi</h1>
+    <p class="subtitle">Materiali, accessi, decisioni</p>
+  </div>
+</div>
+
+<!-- 20 · richieste per owner -->
+<div class="slide bg-white">
+  <div class="content">
+    <p class="eyebrow">Il pacchetto richieste</p>
+    <h2>14 richieste, 5 owner, una scadenza</h2>
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th>Owner</th><th>Cosa serve</th><th>Blocca</th><th>Entro</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>IT</strong></td><td>Estrazione Fidelity da Toshiba, abilitazione già ottenuta</td><td>Segmentazione nei quattro cluster</td><td><span class="badge b-amber">18 settembre</span></td></tr>
+          <tr><td><strong>Marketing</strong></td><td>4DEM, Google Ads, Meta, TradeTracker: dati e accessi viewer</td><td>Audit media, benchmark ROAS, strategia CRM</td><td><span class="badge b-red">18 settembre</span></td></tr>
+          <tr><td><strong>Direzione</strong></td><td>Conferma Go-Live, budget Q4, incentivo MyArea</td><td>Tutto il calendario e il media plan</td><td><span class="badge b-red">22 settembre</span></td></tr>
+          <tr><td><strong>Operations</strong></td><td>Lista 20 PdV con referenti, disponibilità per booking</td><td>Campagne Prenota consulenza</td><td><span class="badge b-amber">18 settembre</span></td></tr>
+          <tr><td><strong>Build team</strong></td><td>Readiness su GA4, GTM, pixel, CAPI, landing, webhook</td><td>Go/No-Go del 30 ottobre</td><td><span class="badge b-amber">23 ottobre</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <span>Il dettaglio campo per campo è già scritto, diviso per owner, pronto da inoltrare. Non serve ricostruirlo in riunione: serve un nome e una data accanto a ciascuna riga. Gli export di PrestaShop e Toshiba sono già abilitati, quindi per l'IT si tratta di estrarre, non di chiedere accesso.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 21 · il blocco numero uno -->
+<div class="slide bg-coral">
+  <div class="content narrow">
+    <p class="eyebrow">Il primo task operativo del 14 settembre</p>
+    <h1>Le Fidelity sono l'ultimo dato che manca,<br>e l'export è già abilitato</h1>
+    <p class="lead">Il resto lo abbiamo già ricostruito da soli, e lo avete appena visto: revenue, scontrino medio, mix prodotto e cinque anni di serie mensile arrivano dal database del vecchio sito. Per le Fidelity l'abilitazione all'estrazione c'è già, quindi lunedì 14 partiamo direttamente dall'estrazione e non da una richiesta di accesso.</p>
+    <div class="cols-2" style="margin-top:26px">
+      <div class="card-ghost">
+        <h3>Cosa estraiamo</h3>
+        <p>ID card, nome, email se presente, cellulare se presente, consenso marketing con data, data ultimo acquisto, punti attivi, punto vendita di riferimento.</p>
+      </div>
+      <div class="card-ghost">
+        <h3>A cosa serve</h3>
+        <p>Dividere le 60.000 card in quattro cluster e dare a ciascuno un canale: chi ha email e consenso, chi ha email senza consenso, chi ha solo il cellulare, chi ha solo la card fisica.</p>
+      </div>
+    </div>
+    <p class="kicker">Se l'estrazione completa dà problemi tecnici, per partire ci bastano i conteggi aggregati per cluster. Il trattamento resta conforme al GDPR in entrambi i casi.</p>
+  </div>
+</div>
+
+<!-- 22 · le decisioni -->
+<div class="slide bg-white">
+  <div class="content">
+    <p class="eyebrow">Tre entro il 22 settembre, una a metà ottobre</p>
+    <h2>Quattro decisioni aperte, una già chiusa</h2>
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th>Decisione</th><th>Raccomandazione Sidea</th><th>Decide</th><th>Entro</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Budget media Q4</strong>, totale e split</td><td>Da calibrare sul fatturato Q4 storico, da € 249.747 nel 2021 a € 113.186 nel 2025, e sul ROAS quando arriva l'export Ads</td><td>Direzione</td><td><span class="badge b-red">22 set</span></td></tr>
+          <tr><td><strong>Incentivo onboarding MyArea</strong></td><td>200 punti bonus subito, più lotteria mensile Gift Card da 100 €</td><td>Marketing e Direzione</td><td><span class="badge b-red">22 set</span></td></tr>
+          <tr><td><strong>Sconto benvenuto primo ordine</strong></td><td>Da valutare: impatto sul margine contro lift di conversione</td><td>Marketing e Direzione</td><td><span class="badge b-red">22 set</span></td></tr>
+          <tr><td><strong>Recensioni post acquisto</strong></td><td>Sì, con tool integrato Shopify</td><td>Marketing</td><td><span class="badge b-amber">16 ott</span></td></tr>
+          <tr><td><strong>Canale WhatsApp e ruolo dell'SMS</strong></td><td>Scelto <strong>WhatsApp Smart Business</strong>. L'SMS resta riservato alla sola validazione del numero di telefono</td><td>Giochi3</td><td><span class="badge b-green">chiusa</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note warn">
+      <span><strong>L'incentivo MyArea è la più urgente delle quattro.</strong> Da quella decisione dipende la stampa dei materiali per venti negozi, e con l'avvio a settembre avete oltre un mese per produrli. Il budget invece blocca il media plan del 2 ottobre.</span>
+    </div>
+    <div class="note">
+      <span><strong>Cosa comporta la scelta già fatta.</strong> Con l'SMS limitato alla validazione del numero, WhatsApp Smart Business diventa il canale di contatto per chi in anagrafica ha solo il telefono. Il flusso va disegnato al workshop del 6 ottobre, insieme alla validazione del numero in fase di onboarding.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 23 · dipendenze -->
+<div class="slide bg-light">
+  <div class="content">
+    <p class="eyebrow">Registro delle dipendenze</p>
+    <h2>Otto dipendenze, tutte oggi aperte</h2>
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th>Dipendenza</th><th>Owner</th><th>Entro</th><th>Stato</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Data Go-Live confermata per iscritto</td><td>Direzione</td><td>9 settembre</td><td><span class="badge b-red">aperta</span></td></tr>
+          <tr><td>Baseline numerica fornita, export già abilitati</td><td>IT e Marketing</td><td>18 settembre</td><td><span class="badge b-amber">aperta</span></td></tr>
+          <tr><td>Budget media Q4 confermato</td><td>Direzione</td><td>22 settembre</td><td><span class="badge b-red">aperta</span></td></tr>
+          <tr><td>Integrazione WhatsApp Smart Business e flusso di validazione OTP</td><td>IT con Sidea</td><td>6 ottobre</td><td><span class="badge b-amber">aperta</span></td></tr>
+          <tr><td>Tracking e landing pronti dalla build</td><td>Build team</td><td>23 ottobre</td><td><span class="badge b-amber">aperta</span></td></tr>
+          <tr><td>Stampa e distribuzione POP nei 20 PdV</td><td>Operations</td><td>30 ottobre</td><td><span class="badge b-amber">aperta</span></td></tr>
+          <tr><td>Calendario booking Liste Nascita</td><td>Operations</td><td>30 ottobre</td><td><span class="badge b-amber">aperta</span></td></tr>
+          <tr><td><strong>Causa isolata del calo del sito da febbraio 2024</strong></td><td>Marketing, IT, Direzione</td><td>22 settembre</td><td><span class="badge b-red">nuova</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <span>Il registro è vivo: viene aggiornato a ogni weekly e portato in Steering. Una dipendenza che resta aperta oltre la sua data diventa un punto di escalation, non una sorpresa.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 24 · divider 05 -->
+<div class="slide bg-dark">
+  <span class="divider-num">06</span>
+  <div class="content narrow">
+    <p class="eyebrow">Blocco sei</p>
+    <h1>Cosa avrete<br>a gennaio</h1>
+    <p class="subtitle">Il punto di arrivo delle 12 settimane</p>
+  </div>
+</div>
+
+<!-- 25 · cosa avrete -->
+<div class="slide bg-white">
+  <div class="content">
+    <p class="eyebrow">Risultato del programma</p>
+    <h2>Cinque asset che restano a Giochi3</h2>
+    <div class="stack">
+      <div class="row"><span class="k">Stack media operativo</span><span class="v">Otto settimane di dato attribuito e un playbook stagionale per il 2027, BFCM incluso.</span></div>
+      <div class="row"><span class="k">Database Fidelity digitalizzato</span><span class="v">Incremento misurabile di email valide, e flussi di life-cycle già attivi sui quattro cluster.</span></div>
+      <div class="row"><span class="k">Linea Liste Nascita lanciata</span><span class="v">Prime cohort, dati di costo per lead e valore nel tempo, canale Mamma in attesa testato.</span></div>
+      <div class="row"><span class="k">Team Marketing autonomo</span><span class="v">Le routine settimanali le esegue Giochi3. Sidea rientra solo nelle review trimestrali.</span></div>
+      <div class="row"><span class="k">Roadmap Q1 2027 firmata</span><span class="v">Priorità e allocazione di budget decise sui dati del trimestre appena chiuso.</span></div>
+    </div>
+    <div class="note">
+      <span>Tre documenti formativi accompagnano il passaggio: formativo Onboarding MyArea il 24 ottobre, playbook BFCM il 28 ottobre, SOP Marketing e playbook Liste Nascita 2027 il 30 dicembre.</span>
+    </div>
+  </div>
+</div>
+
+<!-- 26 · prossimi 14 giorni -->
+<div class="slide bg-light">
+  <div class="content">
+    <p class="eyebrow">Da qui a venerdì 25 settembre</p>
+    <h2>Le prime tre settimane</h2>
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Incontro</th><th>Chi</th><th>Output</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Ven 11 set</strong></td><td>Invio pacchetto richieste e apertura accessi</td><td>Sidea, Marketing, IT</td><td>14 richieste inoltrate per owner</td></tr>
+          <tr><td><strong>Lun 14 set</strong></td><td>Avvio lavori, raccolta dati IT</td><td>Sidea, IT</td><td>Accessi aperti, export Fidelity avviato</td></tr>
+          <tr><td><strong>Mar 15 set</strong></td><td>Raccolta dati Marketing: 4DEM, Ads, TradeTracker</td><td>Sidea, Marketing</td><td>Accessi viewer, export storici avviati</td></tr>
+          <tr><td><strong>Ven 18 set</strong></td><td>Raccolta dati Operations</td><td>Sidea, Operations</td><td>20 PdV con referenti e disponibilità</td></tr>
+          <tr><td><strong>Lun 21 set</strong></td><td>Check stato raccolta dati e sollecito</td><td>Sidea, Marketing, IT</td><td>Registro baseline aggiornato, gap dichiarati</td></tr>
+          <tr><td><strong>Mar 22 set</strong></td><td>Workshop decisioni strategiche</td><td>Sidea, Marketing, Direzione</td><td>Budget, incentivo, sconto benvenuto chiusi</td></tr>
+          <tr><td><strong>Ven 25 set</strong></td><td>Delivery audit performance e tassonomia</td><td>Sidea, Marketing</td><td>Audit validato, naming campagne adottato</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- 27 · chiusura -->
+<div class="slide bg-deep">
+  <div class="content narrow">
+    <p class="eyebrow">Verbale del kickoff</p>
+    <h1>I tre sì, sette nomi<br>e una domanda aperta</h1>
+    <ul class="plain ask" style="max-width:820px;margin:0 auto 8px">
+      <li><span>Go-Live confermato: <strong>martedì 3 novembre 2026</strong>, con o senza soft-launch.</span></li>
+      <li><span>North Star condivisa: <strong>Black Friday 27 novembre</strong>, il Go-Live è la pre-condizione.</span></li>
+      <li><span>Tavolo insediato: <strong>un nome e un sostituto</strong> per ognuno dei sei ruoli, più il referente del build team.</span></li>
+      <li><span>Pacchetto richieste inoltrato <strong>venerdì 11 settembre</strong>, rientro atteso entro il 18.</span></li>
+      <li><span>Tre decisioni in agenda al workshop di <strong>martedì 22 settembre</strong>, le altre due a ottobre.</span></li>
+      <li><span>Un owner per ciascuna delle <strong>quattro ipotesi sul calo del sito</strong>, risposta entro il 22 settembre.</span></li>
+    </ul>
+    <p class="meta">Avvio lavori: lunedì 14 settembre, raccolta dati IT</p>
+  </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const bar = document.getElementById('progressBar');
+  const counter = document.getElementById('slideCounter');
+  let current = 0;
+
+  function showSlide(n) {
+    if (n < 0) n = 0;
+    if (n >= slides.length) n = slides.length - 1;
+    slides[current].classList.remove('active');
+    current = n;
+    slides[current].classList.add('active');
+    bar.style.width = ((current + 1) / slides.length) * 100 + '%';
+    counter.textContent = (current + 1) + ' / ' + slides.length;
+    window.scrollTo(0, 0);
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); showSlide(current + 1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); showSlide(current - 1); }
+    else if (e.key === 'Home') { e.preventDefault(); showSlide(0); }
+    else if (e.key === 'End') { e.preventDefault(); showSlide(slides.length - 1); }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('a')) return;
+    const x = e.clientX, w = window.innerWidth;
+    if (x > w * 0.65) showSlide(current + 1);
+    else if (x < w * 0.35) showSlide(current - 1);
+  });
+
+  let touchStartX = 0;
+  document.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) showSlide(diff > 0 ? current + 1 : current - 1);
+  });
+
+  // grafico: crosshair e tooltip
+  const plot = document.getElementById('cPlot');
+  if (plot) {
+    const tip = document.getElementById('cTip');
+    const cross = document.getElementById('cCross');
+    const hov = document.getElementById('cHov');
+    const svg = plot.querySelector('svg');
+    plot.querySelectorAll('.c-hits rect').forEach((r) => {
+      const show = () => {
+        const x = parseFloat(r.dataset.x), y = parseFloat(r.dataset.y);
+        cross.setAttribute('x1', x); cross.setAttribute('x2', x); cross.setAttribute('opacity', '0.25');
+        hov.setAttribute('cx', x); hov.setAttribute('cy', y); hov.setAttribute('opacity', '1');
+        const box = svg.viewBox.baseVal, rect = plot.getBoundingClientRect();
+        tip.textContent = r.dataset.lab;
+        tip.style.left = (x / box.width * rect.width) + 'px';
+        tip.style.top = (y / box.height * rect.height) + 'px';
+        tip.hidden = false;
+      };
+      r.addEventListener('mouseenter', show);
+      r.addEventListener('focus', show);
+      r.setAttribute('tabindex', '0');
+    });
+    plot.addEventListener('mouseleave', () => {
+      tip.hidden = true;
+      cross.setAttribute('opacity', '0');
+      hov.setAttribute('opacity', '0');
+    });
+  }
+
+  showSlide(0);
+</script>
+
+</body>
+</html>
