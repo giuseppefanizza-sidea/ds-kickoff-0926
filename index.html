@@ -15,6 +15,7 @@
 </style>
 </head>
 <body>
+<title>Kickoff Digital Startup Giokids</title>
 <style>
   :root {
     --navy: #1D3557;
@@ -151,6 +152,8 @@
   .stack .row:last-child { border-bottom: 1px solid var(--n-200); }
   .stack .row .k { font-weight: 700; font-size: 1.05rem; }
   .stack .row .v { font-size: 1.05rem; }
+  .stack.compact .row { grid-template-columns: 320px 1fr; padding: 9px 0; }
+  .stack.compact .row .k, .stack.compact .row .v { font-size: 0.98rem; }
   .bg-dark .stack .row, .bg-deep .stack .row, .bg-teal .stack .row { border-color: rgba(255,255,255,0.16); }
   .bg-dark .stack .row:last-child, .bg-deep .stack .row:last-child, .bg-teal .stack .row:last-child { border-bottom-color: rgba(255,255,255,0.16); }
 
@@ -367,7 +370,7 @@
         <tbody>
           <tr><td class="num">10</td><td>Come lavoriamo insieme</td><td>Chiarezza su chi porta cosa al tavolo</td></tr>
           <tr><td class="num">15</td><td><strong>Il punto di partenza reale</strong></td><td>Cinque anni di vendite del vecchio sito, e una domanda aperta</td></tr>
-          <tr><td class="num">15</td><td>North Star e calendario</td><td>Il Black Friday come vera scadenza, conferma del Go-Live</td></tr>
+          <tr><td class="num">15</td><td>Faro del business e calendario</td><td>Il Black Friday come vera scadenza, punto sul Go-Live</td></tr>
           <tr><td class="num">20</td><td>Insediamento del tavolo</td><td>Ruoli nominati, cadenze fissate, calendario approvato</td></tr>
           <tr><td class="num">20</td><td>Cosa ci serve da voi</td><td>Owner e data per ogni materiale, 5 decisioni indirizzate</td></tr>
           <tr><td class="num">10</td><td>Verbale e prossimi passi</td><td>Verbale condiviso, agenda delle prime tre settimane</td></tr>
@@ -385,13 +388,13 @@
     <div class="cols-3">
       <div class="card-ghost">
         <span class="num">SÌ 01</span>
-        <h3>Data di Go-Live confermata</h3>
-        <p>Martedì 3 novembre, per iscritto. È la riga da cui dipende ogni altra data del programma.</p>
+        <h3>Finestra di Go-Live tracciata</h3>
+        <p>I ritardi dei fornitori tengono la data ancora aperta. Fissiamo oggi un owner e un checkpoint di verifica, non una data blindata.</p>
       </div>
       <div class="card-ghost">
         <span class="num">SÌ 02</span>
-        <h3>Black Friday come North Star</h3>
-        <p>Il 27 novembre è la scadenza vera. Il Go-Live è la pre-condizione, non il traguardo.</p>
+        <h3>Black Friday come faro del business</h3>
+        <p>Il 27 novembre è la scadenza vera e non si muove. Il Go-Live, quale che sia la data, resta la pre-condizione.</p>
       </div>
       <div class="card-ghost">
         <span class="num">SÌ 03</span>
@@ -559,14 +562,14 @@
   </div>
 </div>
 
-<!-- 11 · il crollo -->
+<!-- 11 · il crollo e le ipotesi -->
 <div class="slide bg-light">
   <div class="content wide">
-    <p class="eyebrow">Il dato che cambia la lettura del Q4</p>
-    <h2>A febbraio 2024 il sito diretto ha perso due terzi del fatturato, e non è più risalito</h2>
-    <div class="chart">
+    <p class="eyebrow" style="margin-bottom:8px">Il dato che cambia la lettura del Q4</p>
+    <h2 style="margin-bottom:10px">A febbraio 2024 il sito diretto crolla, e la causa non è isolata</h2>
+    <div class="chart" style="margin-top:0">
       <div class="c-legend"><span class="c-key"><span class="c-swatch"></span><span>Fatturato mensile sito diretto, esclusa Amazon</span></span></div>
-      <div class="c-plot" id="cPlot">
+      <div class="c-plot" id="cPlot" style="max-width:700px;margin:0 auto">
         <svg viewBox="0 0 1060 356" role="img" aria-label="Fatturato mensile del sito diretto da giugno 2021 a giugno 2026, con crollo strutturale da febbraio 2024">
         <title>Fatturato mensile sito diretto, giugno 2021 · giugno 2026</title>
         <line class="c-grid" x1="78" y1="300.0" x2="1006" y2="300.0"/>
@@ -667,10 +670,16 @@
         <div class="c-tip" id="cTip" hidden></div>
       </div>
     </div>
-    <div class="statline" style="margin-top:16px">
-      <div class="item"><span class="fig" style="color:var(--coral)">-64,4%</span><span class="cap">sito diretto, media mensile</span></div>
-      <div class="item"><span class="fig" style="color:var(--chart-b)">-19,4%</span><span class="cap">amazon, stesso periodo</span></div>
-      <div class="item"><span class="fig">-68%</span><span class="cap">picco di dicembre, 2023 → 2025</span></div>
+    <p class="kicker" style="margin-top:8px;font-size:0.98rem">Sito diretto -64,4% al mese, Amazon solo -19,4% nello stesso periodo: il picco di dicembre si è già dimezzato due volte, -68% dal 2023 al 2025.</p>
+    <h3 style="margin-top:10px;margin-bottom:6px;font-size:1.1rem">Quattro ipotesi sulla causa, un owner per ciascuna</h3>
+    <div class="stack compact">
+      <div class="row" style="padding:5px 0"><span class="k">Taglio o stop della spesa Ads</span><span class="v">Marketing · entro 18 set</span></div>
+      <div class="row" style="padding:5px 0"><span class="k">Perdita di posizionamento o problema tecnico</span><span class="v">IT con Sidea · entro 18 set</span></div>
+      <div class="row" style="padding:5px 0"><span class="k">Cambio del gateway di pagamento</span><span class="v">IT · entro 22 set</span></div>
+      <div class="row" style="padding:5px 0"><span class="k">Spostamento di priorità verso Amazon</span><span class="v">Direzione · oggi</span></div>
+    </div>
+    <div class="note stop" style="margin-top:8px;padding:10px 16px">
+      <span><strong>Non chiediamo una risposta oggi, tranne sull'ultima riga.</strong> Chiediamo un owner per ciascuna ipotesi e la risposta entro il 22 settembre, prima che il media plan del 2 ottobre fissi il budget su un canale la cui causa di calo non è ancora isolata.</span>
     </div>
   </div>
 </div>
@@ -722,36 +731,12 @@
   </div>
 </div>
 
-<!-- 14 · quattro ipotesi -->
-<div class="slide bg-white">
-  <div class="content">
-    <p class="eyebrow">La domanda che portiamo al tavolo</p>
-    <h2>Cosa è cambiato a febbraio 2024</h2>
-    <div class="t-wrap">
-      <table>
-        <thead>
-          <tr><th>Ipotesi</th><th>Come si verifica</th><th>Owner</th><th>Entro</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>Taglio o stop della spesa Ads</strong></td><td>Export Google e Meta su 2023 e 2024, confronto mese per mese</td><td>Marketing</td><td>18 set</td></tr>
-          <tr><td><strong>Perdita di posizionamento o problema tecnico</strong></td><td>Search Console storica, log di migrazioni e downtime</td><td>IT con Sidea</td><td>18 set</td></tr>
-          <tr><td><strong>Cambio del gateway di pagamento</strong></td><td>Nei dati ps_checkout sparisce dopo il 2023, sostituito da PayPal e MultiSafepay. Va verificato se la transizione ha introdotto frizione o fermi</td><td>IT</td><td>22 set</td></tr>
-          <tr><td><strong>Spostamento di priorità verso Amazon</strong></td><td>Conferma diretta della Direzione, nessun dato da estrarre</td><td>Direzione</td><td>oggi</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="note stop">
-      <span><strong>Non chiediamo una risposta oggi, tranne sull'ultima riga.</strong> Chiediamo un owner per ciascuna ipotesi e la risposta entro il 22 settembre, prima che il media plan del 2 ottobre fissi il budget su un canale la cui causa di calo non è ancora isolata.</span>
-    </div>
-  </div>
-</div>
-
-<!-- 15 · divider 03 · north star -->
+<!-- 15 · divider 03 · faro del business -->
 <div class="slide bg-dark">
   <span class="divider-num">03</span>
   <div class="content narrow">
     <p class="eyebrow">Blocco tre</p>
-    <h1>La North Star<br>e il calendario</h1>
+    <h1>Il faro del business<br>e il calendario</h1>
     <p class="subtitle">Perché il piano è costruito a ritroso</p>
   </div>
 </div>
@@ -761,10 +746,10 @@
   <div class="content narrow">
     <p class="eyebrow">La scelta di pianificazione</p>
     <h1>Il Go-Live non è la scadenza.<br>Il Black Friday lo è.</h1>
-    <p class="lead">Il 3 novembre serve ad arrivare al 27 novembre con campagne già rodate, flussi testati e audience calde. Tre settimane di rodaggio non sono un margine di sicurezza: sono la condizione per spendere bene il budget nel picco.</p>
+    <p class="lead">I ritardi dei fornitori tengono la data di Go-Live ancora aperta. Il 27 novembre no: qualunque sia la data di partenza, ci arriviamo con campagne già rodate, flussi testati e audience calde. Non si anticipa il lancio a fine ottobre senza prodotto e operatività pronti.</p>
     <div class="statline">
-      <div class="item"><span class="fig">3 nov</span><span class="cap">go-live</span></div>
-      <div class="item"><span class="fig">3 sett.</span><span class="cap">di rodaggio e dato</span></div>
+      <div class="item"><span class="fig">da confermare</span><span class="cap">go-live, in attesa fornitori</span></div>
+      <div class="item"><span class="fig">min. 3 sett.</span><span class="cap">di rodaggio e dato</span></div>
       <div class="item"><span class="fig">27 nov</span><span class="cap">black friday</span></div>
     </div>
   </div>
@@ -795,7 +780,7 @@
         <span class="sub">Consegnato e spiegato al team</span>
       </div>
       <div class="stop">
-        <span class="date">3 nov</span>
+        <span class="date">3 nov*</span>
         <span class="dotrow"><span class="dot"></span></span>
         <span class="label">Go-Live</span>
         <span class="sub">Campagne live, flussi attivi, POP in store</span>
@@ -814,7 +799,7 @@
       </div>
     </div>
     <div class="note warn">
-      <span><strong>Il vincolo da tenere a mente.</strong> Il 30 ottobre c'è un Go/No-Go formale. Se il tracking o la landing Liste Nascita non sono pronti, si rinvia con un piano, non si lancia sperando.</span>
+      <span><strong>*Il 3 novembre è la data di lavoro, non ancora blindata.</strong> I ritardi dei fornitori la tengono aperta, e c'è pressione a spostare il lancio a fine ottobre nonostante prodotto e operatività non siano pronti. Il 30 ottobre resta il Go/No-Go formale: se tracking, landing o readiness prodotto non ci sono, si rinvia con un piano, non si anticipa sperando. Il 27 novembre non si tocca.</span>
     </div>
   </div>
 </div>
@@ -874,8 +859,8 @@
 <div class="slide bg-light">
   <div class="content">
     <p class="eyebrow">Come misuriamo</p>
-    <h2>North Star e KPI di pilastro</h2>
-    <p class="lead" style="margin-bottom:24px">North Star: fatturato e-commerce Q4, e numero di Fidelity con email valida. Il primo è il risultato del trimestre, il secondo è l'asset che resta negli anni.</p>
+    <h2>Faro del business e KPI di pilastro</h2>
+    <p class="lead" style="margin-bottom:24px">Faro del business: fatturato e-commerce Q4, e numero di Fidelity con email valida. Il primo è il risultato del trimestre, il secondo è l'asset che resta negli anni.</p>
     <div class="t-wrap">
       <table>
         <thead>
@@ -1076,7 +1061,7 @@
           <tr><td><strong>Incentivo onboarding MyArea</strong></td><td>200 punti bonus subito, più lotteria mensile Gift Card da 100 €</td><td>Marketing e Direzione</td><td><span class="badge b-red">22 set</span></td></tr>
           <tr><td><strong>Sconto benvenuto primo ordine</strong></td><td>Da valutare: impatto sul margine contro lift di conversione</td><td>Marketing e Direzione</td><td><span class="badge b-red">22 set</span></td></tr>
           <tr><td><strong>Recensioni post acquisto</strong></td><td>Sì, con tool integrato Shopify</td><td>Marketing</td><td><span class="badge b-amber">16 ott</span></td></tr>
-          <tr><td><strong>Canale WhatsApp e ruolo dell'SMS</strong></td><td>Scelto <strong>WhatsApp Smart Business</strong>. L'SMS resta riservato alla sola validazione del numero di telefono</td><td>Giochi3</td><td><span class="badge b-green">chiusa</span></td></tr>
+          <tr><td><strong>Canale WhatsApp e ruolo dell'SMS</strong></td><td>Scelto <strong>WhatsApp Smart Business</strong> per l'invio diretto, senza flussi di marketing automation automatizzati. L'SMS resta riservato alla sola validazione del numero di telefono</td><td>Giochi3</td><td><span class="badge b-green">chiusa</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -1084,7 +1069,7 @@
       <span><strong>L'incentivo MyArea è la più urgente delle quattro.</strong> Da quella decisione dipende la stampa dei materiali per venti negozi, e con l'avvio a settembre avete oltre un mese per produrli. Il budget invece blocca il media plan del 2 ottobre.</span>
     </div>
     <div class="note">
-      <span><strong>Cosa comporta la scelta già fatta.</strong> Con l'SMS limitato alla validazione del numero, WhatsApp Smart Business diventa il canale di contatto per chi in anagrafica ha solo il telefono. Il flusso va disegnato al workshop del 6 ottobre, insieme alla validazione del numero in fase di onboarding.</span>
+      <span><strong>Cosa comporta la scelta già fatta.</strong> Con l'SMS limitato alla validazione del numero, WhatsApp Smart Business diventa il canale di invio diretto per chi in anagrafica ha solo il telefono, non un flusso di marketing automation automatizzato. L'invio diretto e la validazione del numero in fase di onboarding vanno disegnati al workshop del 6 ottobre.</span>
     </div>
   </div>
 </div>
@@ -1100,7 +1085,7 @@
           <tr><th>Dipendenza</th><th>Owner</th><th>Entro</th><th>Stato</th></tr>
         </thead>
         <tbody>
-          <tr><td>Data Go-Live confermata per iscritto</td><td>Direzione</td><td>9 settembre</td><td><span class="badge b-red">aperta</span></td></tr>
+          <tr><td>Finestra di Go-Live tracciata, owner e checkpoint assegnati</td><td>Direzione</td><td>9 settembre</td><td><span class="badge b-red">aperta</span></td></tr>
           <tr><td>Baseline numerica fornita, export già abilitati</td><td>IT e Marketing</td><td>18 settembre</td><td><span class="badge b-amber">aperta</span></td></tr>
           <tr><td>Budget media Q4 confermato</td><td>Direzione</td><td>22 settembre</td><td><span class="badge b-red">aperta</span></td></tr>
           <tr><td>Integrazione WhatsApp Smart Business e flusso di validazione OTP</td><td>IT con Sidea</td><td>6 ottobre</td><td><span class="badge b-amber">aperta</span></td></tr>
@@ -1136,7 +1121,7 @@
       <div class="row"><span class="k">Stack media operativo</span><span class="v">Otto settimane di dato attribuito e un playbook stagionale per il 2027, BFCM incluso.</span></div>
       <div class="row"><span class="k">Database Fidelity digitalizzato</span><span class="v">Incremento misurabile di email valide, e flussi di life-cycle già attivi sui quattro cluster.</span></div>
       <div class="row"><span class="k">Linea Liste Nascita lanciata</span><span class="v">Prime cohort, dati di costo per lead e valore nel tempo, canale Mamma in attesa testato.</span></div>
-      <div class="row"><span class="k">Team Marketing autonomo</span><span class="v">Le routine settimanali le esegue Giochi3. Sidea rientra solo nelle review trimestrali.</span></div>
+      <div class="row"><span class="k">Team Marketing autonomo</span><span class="v">Le routine settimanali le esegue Giochi3, con playbook e SOP già in mano.</span></div>
       <div class="row"><span class="k">Roadmap Q1 2027 firmata</span><span class="v">Priorità e allocazione di budget decise sui dati del trimestre appena chiuso.</span></div>
     </div>
     <div class="note">
@@ -1175,8 +1160,8 @@
     <p class="eyebrow">Verbale del kickoff</p>
     <h1>I tre sì, sette nomi<br>e una domanda aperta</h1>
     <ul class="plain ask" style="max-width:820px;margin:0 auto 8px">
-      <li><span>Go-Live confermato: <strong>martedì 3 novembre 2026</strong>, con o senza soft-launch.</span></li>
-      <li><span>North Star condivisa: <strong>Black Friday 27 novembre</strong>, il Go-Live è la pre-condizione.</span></li>
+      <li><span>Go-Live in verifica: <strong>martedì 3 novembre 2026</strong> resta la data di lavoro, owner e checkpoint assegnati oggi.</span></li>
+      <li><span>Faro del business condiviso: <strong>Black Friday 27 novembre</strong> non si muove, il Go-Live è la pre-condizione.</span></li>
       <li><span>Tavolo insediato: <strong>un nome e un sostituto</strong> per ognuno dei sei ruoli, più il referente del build team.</span></li>
       <li><span>Pacchetto richieste inoltrato <strong>venerdì 11 settembre</strong>, rientro atteso entro il 18.</span></li>
       <li><span>Tre decisioni in agenda al workshop di <strong>martedì 22 settembre</strong>, le altre due a ottobre.</span></li>
